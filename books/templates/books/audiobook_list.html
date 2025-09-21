@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Audiobooks</title>
+</head>
+<body>
+    <h1>List of All Audiobooks</h1>
+
+    {% for audiobook in audiobooks %}
+        <hr>
+        <p><strong>Title:</strong> {{ audiobook.title }}</p>
+        <p><strong>Author:</strong> {{ audiobook.author.name }}</p>
+        <p><strong>Narrator:</strong> {{ audiobook.narrator.name }}</p>
+        <p><strong>Duration:</strong> {{ audiobook.duration_in_minutes }} minutes</p>
+    {% endfor %}
+
+</body>
+</html>
